@@ -1,0 +1,271 @@
+<!DOCTYPE html><!-- html5 -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog Page</title>
+		<link rel="icon"href="photoSource/JPLogoNew.webp"type="image/png">
+		<link rel="stylesheet"href="main.css">
+		<link rel="stylesheet" href="addStyles.css">
+  </head>
+	<!-- body content section -->
+  <body>
+		<!-- video background -->
+		<div class="video-background">
+			<!-- snow video -->
+			<video autoplay muted loop id="backgroundVideo">
+				<source src="videoSource/4K_Winter_Snow_Fall_Animation_-_Free_Background,_Wallpaper,_Stock_Footage(137).mp4" 
+				type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<!-- content area for blog page -->
+		<div id="contentArea">
+			<!-- header section -->
+			<header>
+				<!-- logo area -->
+				<div id="logoAndName">
+					<a href="main.html">
+						<img src="photoSource/JPLogoNew.webp"alt="JP Logo"width="100%"height="100%">
+					</a>
+				</div>
+				<!-- page name -->
+				<span class="page-name">Blog</span>	
+				<!-- three navigation buttons for three pages -->
+				<nav id="threeNav">
+					<ul>
+						<!-- home page href -->
+						<li id="homeLink"onclick="homePageActive()">
+							<a href="main.html">
+								<img src="photoSource/homeLight.png"alt="Home Icon">
+								<span class="word-drop">Home</span>
+							</a>
+						</li>
+						<!-- blog page href -->
+						<li id="blogLink"onclick="blogPageActive()">
+							<a href="blogPageFile.html">
+								<img src="photoSource/blogLightMain.png"alt="Blog Icon">
+								<span class="word-drop">Blog</span>
+							</a>
+						</li>
+						<!-- flex page href -->
+						<li id="flexLink"onclick="flexPageActive()">
+							<a href="flexPageFile.html">
+								<img src="photoSource/trophyLight.png"alt="Flex Icon">
+								<span class="word-drop">Flex</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- account section area -->
+				<div id="userOptions">
+					<div class="option">
+						<img id="feedbackMessage" src="photoSource\chat.png"alt="Color Modes">
+						<span class="word-drop">Contact and Feedback</span>
+					</div>
+					<div class="option">
+						<img 
+							id="colorModes"
+							class="hide-button"
+							src="photoSource/heartflex.png"
+							alt="Color Modes">
+						<span class="word-drop">Highlights</span>
+					</div>
+					<div class="option">
+						<img 
+							id="profileImage"
+							src="photoSource/MainProfileImage.jpg"
+							alt="Profile Picture">
+						<span class="word-drop">Account</span>
+					</div>
+				</div>
+			</header>
+
+			<!-- feedback popup section -->
+			<div id="popup" class="hidden">
+				<div class="popup-content">
+					<span id="closePopup">&times;</span>
+					<h2>
+						<span class="contact-color">Contact</span> & 
+						<span class="feedback-color">Feedback</span>
+					</h2>
+					<form id="feedbackForm">
+						<div class="input-container">
+							<label for="name">Name:</label>
+							<input type="text" id="name" name="name" required>
+						</div>
+						<div class="input-container">
+							<label for="email">Email:</label>
+							<input type="email" id="email" name="email" required>
+						</div>
+						<div class="input-container">
+							<label for="message">Message:</label>
+							<textarea id="message" name="message" rows="4" required></textarea>
+						</div>
+						<button id="submitButton" type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+			
+			<!-- main content section -->
+			<main id="blogMain">
+				<!-- house video background -->
+				<div id="houseBuild">
+					<video autoplay loop muted>
+						<source src="videoSource/FireCabinshort.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					<!-- blog content area -->
+					<div class="blog-content">
+						<!-- infographics output -->
+						<h2 class="initial-hidden">
+							Technology Timeline Infographics - September 7, 2024
+						</h2>
+						<div class="blog-box ">
+							<div class="explanations">
+								<span class="initial-hidden">
+									I enjoyed working on the activity about the fourth generation PC and VLSI 
+									in 1972 since I got to meet my new classmates. The project was quite nice, 
+									working together and learning how microprocessors and VLSI changed computers. 
+									It helped me realize how technology improved, and it's even better because I get 
+									to connect with my classmates.
+								</span>
+							</div>
+							<div class="lessons-image" onclick="expandImageOrFile(this)">
+								<img 
+									src="photoSource/infographicsGroup 5_Abecia.png"
+									alt="Lessons"
+									>
+							</div>
+						</div>
+						<!-- cybercrime activity -->
+						<h2 class="target-hidden">
+							Cybercrime Case Activity - September 15, 2024
+						</h2>
+						<div class="blog-box target-hidden">
+							<div class="explanations">
+								<span>
+									One of the important things I learned from this ILOVEYOU worm was how it presented unpreparedness 
+									in cybersecurity awareness at the time. 
+									The worm spread so rapidly to most countries, it caused panic, and it resulted in huge damage. 
+									This showed that there was a need to embrace innovation with better funding of cybersecurity 
+									and efforts to avoid such attacks in the future.
+								</span>
+							</div>
+							<div class="lessons-image" onclick="expandFile(this)">
+								<iframe 
+									src="filesSource/cyberCrimeActivity.pdf" 
+									>
+								</iframe>
+							</div>
+						</div>
+						<!-- html activity 1 -->
+						<h2 class="target-hidden">
+							HTML Activity 1 - October 23, 2024
+						</h2>
+						<div class="blog-box target-hidden">
+							<div class="explanations">
+								<span>
+									One of my favorite lessons in Introduction to Computing is actually our first HTML activity. 
+									It makes me feel accomplished, seeing how websites are made because of coding and programming. 
+									Understanding the structure of HTML and just how important each element is in a website's 
+									design really opened my eyes to the power of coding.
+								</span>
+							</div>
+							<div class="lessons-image">
+								<iframe src="filesSource/htmlFirstAbecia_HTMLActivity01.pdf"></iframe>
+							</div>
+						</div>
+						<!-- basic html and css -->
+						<h2 class="target-hidden">
+							Basic HTML & CSS - October 28, 2024
+						</h2>
+						<div class="blog-box target-hidden">
+							<div class="explanations">
+								<span>
+									 I was pretty excited to learn HTML and CSS, discovering how HTML constructs 
+									 the structure of a webpage with its tags for headings, paragraphs, links, and 
+									 images; CSS brings life to those elements to style them up with color, fonts, 
+									 and layouts. It was cool to discover how HTML works with CSS—HTML has the content, 
+									 and then CSS takes it to that visually beautiful and excellent UI look.
+								</span>
+							</div>
+							<div class="lessons-image">
+								<iframe src="filesSource/IT111_ 5 HTML & CSS.pdf"></iframe>
+							</div>
+						</div>
+						<!-- cross analysis output -->
+						<h2 class="target-hidden">
+							Activity: Cross-Analysis on Emerging Trends in Cloud Computing, 
+							Artificial Intelligence, and the Internet of Things - November 9, 2024
+						</h2>
+						<div class="blog-box target-hidden">
+							<div class="explanations">
+								<span>
+									I learned that the three key trends of the 20th century are AI, Cloud Computing, and IoT. 
+									They transform industry through decision-making, real-time connectivity, and secure data 
+									processing for efficiency, automation, and innovation.
+								</span>
+							</div>
+							<div class="lessons-image">
+								<iframe src="filesSource/crossAnalysis.pdf"></iframe>
+							</div>
+						</div>
+						<!-- website porfolio section -->
+						<h2>
+							Website Portfolio Major Output - December 9, 2024
+						</h2>	
+						<div class="blog-box">
+							<div class="explanations">
+								<span>
+									I have been struggling with trying to make my website portfolio. I am just 
+									learning HTML and CSS, so this has been my most challenging time. You don't 
+									know how frustrating it can get when things do not align, but it is really 
+									worthwhile for the experience. I'm learning to code, but with the problems 
+									that come along with it, I am feeling rather proud of what I come up with. 
+									It indicates that persistence will eventually lead to improvement.
+								</span>
+							</div>
+							<div class="lessons-image" onclick="expandImageOrFile(this)">
+								<img src="photoSource/myWebpagePhoto.PNG"alt="Website Portfolio">
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<!-- footer area -->
+		<footer>
+				<div class="footer-section">
+						<h3>Credits</h3>
+						<p>Images:</p>
+						<ul>
+							<li><a href="https://www.pexels.com/search/HD%20wallpaper/"target="_blank">Pexels</a></li>
+							<li><a href="https://buksu.edu.ph/"target="_blank">BukSU</a></li>
+							<li><a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)"target="_blank">Wikipedia</a></li>
+						</ul>
+						<p>Icons:</p>
+						<ul>
+							<li><a href="https://www.flaticon.com/search?word=Home"target="_blank">FLATICON</a></li>
+						</ul>
+						<p>Videos:</p>
+						<ul>
+							<li><a href="https://www.youtube.com/watch?v=_E_eTODAPsg&pp=ygUONGtfd2ludGVyX3Nub3c%3D"target="_blank">NeonXMD</a></li>
+							<li><a href="https://www.youtube.com/@Your-CozyCorner"target="_blank">Your Cozy Corner</a></li>
+						</ul>
+				</div>
+				<div class="footer-section">
+						<h3>Developer</h3>
+						<p><span>&copy; 2024 John Paul Abecia. All rights reserved | v1.0</span></p>
+				</div>
+				<div class="footer-section">
+						<h3>Submitted by</h3>
+						<p><span>John Paul D. Abecia</span></p>
+						<p>Submitted to: <span>Glaiza Mae Libe</span></p>
+						<p><span>Introduction to Computing</span></p>
+				</div>
+			</footer>
+		<!-- javascript source -->
+		<script src="scriptsSource\webScripts.js"></script>
+  </body>
+</html>
