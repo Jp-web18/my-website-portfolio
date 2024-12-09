@@ -1,0 +1,258 @@
+<!DOCTYPE html><!-- html5 -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+		<link rel="icon" href="photoSource/JPLogoNew.webp" type="image/png">
+		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="addStyles.css">
+  </head>
+	<!-- body section for home page -->
+  <body>
+		<!-- video background -->
+		<div class="video-background">
+			<!-- snow video -->
+			<video autoplay muted loop id="backgroundVideo">
+				<source src="videoSource/4K_Winter_Snow_Fall_Animation_-_Free_Background,_Wallpaper,_Stock_Footage(137).mp4" 
+				type="video/mp4">
+				Your browser does not support the video tag.
+			</video>
+		</div>
+		<!-- content area for home page -->
+		<div id="contentArea">
+			<!-- header section -->
+			<header>
+				<!-- website logo section -->
+				<div id="logoAndName">
+					<a href="main.html">
+						<img src="photoSource/JPLogoNew.webp"alt="JP Logo"width="100%"height="100%">
+					</a>
+				</div>
+				<!-- page name -->
+				<span class="page-name">Home</span>
+				<!-- three navigation buttons for three pages -->
+				<nav id="threeNav">
+					<ul>
+						<!-- home page href -->
+						<li id="homeLink" class="homeLink" onclick="homePageActive()">
+							<a href="main.html">
+								<img src="photoSource/homeLight.png"alt="Home Icon"width="28px"height="28px">
+								<span class="word-drop">Home</span>
+							</a>
+						</li>
+						<!-- blog page href -->
+						<li id="blogLink" class="blogLink" onclick="blogPageActive()">
+							<a href="blogPageFile.html">
+								<img src="photoSource/blogLightMain.png"alt="Blog Icon"width="28px"height="28px">
+								<span class="word-drop">Blog</span>
+							</a>
+						</li>
+						<!-- flex page href -->
+						<li id="flexLink" class="flexLink" onclick="flexPageActive()">
+							<a href="flexPageFile.html">
+								<img src="photoSource/trophyLight.png"alt="Flex Icon"width="28px"height="28px">
+								<span class="word-drop">Flex</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<!-- account section area -->
+				<div id="userOptions">
+					<div class="option">
+						<img id="feedbackMessage" src="photoSource\chat.png"alt="Color Modes">
+						<span class="word-drop">Contact and Feedback</span>
+					</div>
+					<div class="option">
+						<img id="colorModes"class="hide-button"src="photoSource/heartflex.png"alt="Color Modes">
+						<span class="word-drop">Highlights</span>
+					</div>
+					<div class="option">
+						<img id="profileImage"src="photoSource/MainProfileImage.jpg"alt="Profile Picture">
+						<span class="word-drop">Account</span>
+					</div>
+				</div>
+			</header>
+
+			<!-- feedback popup section -->
+			<div id="popup" class="hidden">
+				<div class="popup-content">
+					<span id="closePopup">&times;</span>
+					<h2>
+						<span class="contact-color">Contact</span> & 
+						<span class="feedback-color">Feedback</span>
+					</h2>
+					<form id="feedbackForm">
+						<div class="input-container">
+							<label for="name">Name:</label>
+							<input type="text" id="name" name="name" required>
+						</div>
+						<div class="input-container">
+							<label for="email">Email:</label>
+							<input type="email" id="email" name="email" required>
+						</div>
+						<div class="input-container">
+							<label for="message">Message:</label>
+							<textarea id="message" name="message" rows="4" required></textarea>
+						</div>
+						<button id="submitButton" type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+
+			<!-- main content section -->
+			<main>
+				<!-- skills and hobbies section -->
+				<section class="content-scroll" id="sectionOne">
+					<h1 id="leftHeeaderSkills">SKILLS</h1>
+					<div id="skillsAndHobbies" class="box">
+						<img src="photoSource/businessManagementSkills.jpg" alt="Skills">
+					</div>
+					<div class="description">
+						<h2>Business management</h2>
+					</div>
+					<div class="box">
+						<img src="photoSource/BasketballRim.jpg" alt="Basketball">
+					</div>
+					<div class="description">
+						<h2>Basketball</h2>
+					</div>
+					<div class="box">
+						<img src="photoSource/programmingSkills.jpg" alt="Christmas Tree">
+					</div>
+					<div class="description">
+						<h2>Programming</h2>
+					</div>
+					<!-- hobbies section -->
+					<h1 id="leftHeeaderSkills">HOBBIES</h1>
+					<div class="box">
+						<img src="photoSource/watchingMovies.jpg" alt="Watching movies">
+					</div>
+					<div class="description">
+						<h2>Watching movies</h2>
+					</div>
+					<div class="box">
+						<img src="photoSource/listeningToMusic.jpg" alt="Listening to music">
+					</div>
+					<div class="description">
+						<h2>Listening to music</h2>
+					</div>
+					<div class="box">
+						<img src="photoSource/walkingAlone.jpg" alt="Walking alone">
+					</div>
+					<div class="description">
+						<h2>Walking alone</h2>
+					</div>
+				</section>
+				<!-- welcome message and video section -->
+				<section class="content-scroll" id="sectionTwo">
+					<div class="welcome target-hidden">
+						<img src="photoSource/lincolnSec.jpg" alt="Grade 12 Picture">
+					</div>
+					<!-- welcome message introduction -->
+					<div class="welcome message">
+						<div class="inside">
+							<img src="photoSource/MainProfileImage.jpg" alt="Welcome Image">
+							<div id="textContainer">
+								<span class="introduction">
+									Welcome to My Portfolio! I am John Paul D. Abecia, an aspiring 
+									full-stack developer who is a self-motivated coder who finds 
+									passion in technology. If I have free time, then watching movies, 
+									particularly Avengers, and listening to music helps me to relax. 
+									I also have a business management background that comes from 
+									the management of our family business, which enables me to 
+									provide leadership and problem-solving skills for every task. I 
+									am dedicating myself to the hard work and commitment 
+									required to take on school workloads and assignments as part of 
+									my objectives in pursuit of my goals and desires. I want to focus 
+									my technical skills with an added layer of business acumen to 
+									make meaningful contributions to the field of technology. Thank 
+									you for visiting my portfolio. God bless!
+								</span>
+							</div>
+						</div>
+					</div>
+					<!-- VIDEO "My Vision: How I See Myself in 8 Years" -->
+					<div class="welcome target-hidden">
+						<video controls>
+							<source src="videoSource/howISeeMySelf.mp4"type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+				</section>
+				<!-- social media account section -->
+				<section class="content-scroll" id="sectionOne">
+					<h1 id="leftHeeaderSkills">SOCIAL MEDIA ACCOUNTS</h1>
+					<div class="description account-name">
+						<a href="https://www.facebook.com/profile.php?id=100069516212400"target="_blank">
+							<img src="photoSource/facebook.png"alt="Facebook"width="30px"height="30px">
+						</a>
+						<h3 class="text">
+							<a href="https://www.facebook.com/profile.php?id=100069516212400"target="_blank">Johnpaul Abecia</a>
+						</h3>
+					</div>
+					<div class="description account-name">
+						<a href="https://www.instagram.com/abeciajohnpaul/"target="_blank">
+							<img src="photoSource/instagram.png"alt="Instagram"width="30px"height="30px">
+						</a>
+						<h3 class="text instagram">
+							<a href="https://www.instagram.com/abeciajohnpaul/"target="_blank">abeciajohnpaul</a>
+						</h3>
+					</div>
+					<h1 id="favoriteSubjects">Favorite Subjects</h1>
+					<div class="favorite-sub">
+						<img src="photoSource/IT111Image.png"alt="Introduction to Computing">
+					</div>
+					<div class="favorite-sub">
+						<img src="photoSource/IT112ComputerProgramming.png"alt="Computer Programming">
+					</div>
+					<h1 id="leftHeeaderSkills">Academic Groups</h1>
+					<div class="box">
+						<img src="photoSource/Ruby_logo.svg.png"alt="Group Ruby">
+					</div>
+					<div class="description">
+						<h2>Group 1 Ruby</h2>
+					</div>
+					<div class="box">
+						<img src="photoSource/tapayGroup.PNG"alt="Group Ruby">
+					</div>
+					<div class="description">
+						<h2>TAPAY Group</h2>
+					</div>
+				</section>
+			</main>	
+		</div>
+		<!-- footer section -->
+		<footer>
+				<div class="footer-section">
+						<h3>Credits</h3>
+						<p>Images:</p>
+						<ul>
+							<li><a href="https://www.pexels.com/search/HD%20wallpaper/"target="_blank">Pexels</a></li>
+							<li><a href="https://buksu.edu.ph/"target="_blank">BukSU</a></li>
+							<li><a href="https://en.wikipedia.org/wiki/Ruby_(programming_language)"target="_blank">Wikipedia</a></li>
+						</ul>
+						<p>Icons:</p>
+						<ul>
+							<li><a href="https://www.flaticon.com/search?word=Home"target="_blank">FLATICON</a></li>
+						</ul>
+						<p>Videos:</p>
+						<ul>
+							<li><a href="https://www.youtube.com/watch?v=_E_eTODAPsg&pp=ygUONGtfd2ludGVyX3Nub3c%3D"target="_blank">NeonXMD</a></li>
+							<li><a href="https://www.youtube.com/@Your-CozyCorner"target="_blank">Your Cozy Corner</a></li>
+						</ul>
+				</div>
+				<div class="footer-section">
+						<h3>Developer</h3>
+						<p><span>&copy; 2024 John Paul Abecia. All rights reserved | v1.0</span></p>
+				</div>
+				<div class="footer-section">
+						<h3>Submitted by</h3>
+						<p><span>John Paul D. Abecia</span></p>
+						<p>Submitted to: <span>Glaiza Mae Libe</span></p>
+						<p><span>Introduction to Computing</span></p>
+				</div>
+			</footer>
+		<script src="scriptsSource\webScripts.js"></script>
+  </body>
+</html>
